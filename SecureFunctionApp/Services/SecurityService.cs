@@ -59,17 +59,17 @@ namespace SecureFunctionApp.Services
 
             if (string.IsNullOrEmpty(token))
             {
-                log.LogError(new ArgumentNullException(nameof(token)), "ERROR: ValidateToken: token input value is misssing.");
+                log.LogError(new ArgumentNullException(nameof(token)), "ERROR: ValidateToken: token input value is missing.");
             }
 
             if (string.IsNullOrEmpty(issuer))
             {
-                log.LogError(new ArgumentNullException(nameof(issuer)), "ERROR: ValidateToken: issuer input value is misssing.");
+                log.LogError(new ArgumentNullException(nameof(issuer)), "ERROR: ValidateToken: issuer input value is missing.");
             }
 
             if (string.IsNullOrEmpty(audience))
             {
-                log.LogError(new ArgumentNullException(nameof(audience)), "ERROR: ValidateToken: audience input value is misssing.");
+                log.LogError(new ArgumentNullException(nameof(audience)), "ERROR: ValidateToken: audience input value is missing.");
             }
 
             var discoveryDocument = await configurationManager.GetConfigurationAsync(ct);
